@@ -22,8 +22,23 @@
         android:layout_height="wrap_content"
         android:text="Videos" />
     <Button
+        android:id="@+id/bt_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Picker" />
+    <Button
         android:id="@+id/contacts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Contacts" />
+    <Button
+        android:id="@+id/pick_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PlayAudio" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
