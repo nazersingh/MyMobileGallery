@@ -35,6 +35,7 @@ val LOG_TAG="PhotosFragment"
 //        val li = activity!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = LayoutInflater.from(activity).inflate(R.layout.photos, null)
         permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE)
+        permissions.add(Manifest.permission.RECORD_AUDIO)
 
         view.galleryGridView.setLayoutManager(GridLayoutManager(context!!, 3))
         var layoutTransition:LayoutTransition  = LayoutTransition()

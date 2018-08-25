@@ -221,10 +221,10 @@ object Dialogues {
      fun showImagePickerDialog(activity: Activity) {
         Dialogues.getBuilder(activity)?.setTitle("Select Action")
                 ?.setMessage("Select photo from gallery \n Capture photo from camera")
-                ?.setPositiveButton(mPositiveText) { dialog, which ->
+                ?.setPositiveButton("Gallery") { dialog, which ->
                     ImageVideoPicker.startActivityPhotoFromGallary(activity)
                 }
-                ?.setNegativeButton(mNegativeText) { dialog, which ->
+                ?.setNegativeButton("Camera") { dialog, which ->
                     ImageVideoPicker.startActivityPhotoFromCamera(activity)
                 }?.setNeutralButton(mNeutralText) { dialog, which ->
                     dialog.dismiss()
@@ -236,10 +236,10 @@ object Dialogues {
     fun showVideoPickerDialog(activity: Activity) {
         Dialogues.getBuilder(activity)?.setTitle("Select Action")
                 ?.setMessage("Select video from gallery \n Capture video from camera")
-                ?.setPositiveButton(mPositiveText) { dialog, which ->
+                ?.setPositiveButton("Gallery") { dialog, which ->
                     ImageVideoPicker.startActivityVideoFromGallary(activity)
                 }
-                ?.setNegativeButton(mNegativeText) { dialog, which ->
+                ?.setNegativeButton("Camera") { dialog, which ->
                     ImageVideoPicker.startActivityVideoFromCamera(activity)
                 }?.setNeutralButton(mNeutralText) { dialog, which ->
                     dialog.dismiss()
@@ -266,7 +266,7 @@ object Dialogues {
      */
     fun showAudioPickerDialog(activity: Activity) {
         Dialogues.getBuilder(activity)?.setTitle(mTitle)
-                ?.setMessage(mMessage)
+                ?.setMessage("Select Audio from gallery \n Record audio from camera")
                 ?.setPositiveButton(mPositiveText) { dialog, which ->
                     ImageVideoPicker.startActivityAudioFromGallary(activity)
                 }
